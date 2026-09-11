@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - Taskify</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            ✓ Taskify
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">
+                Home
+            </a>
+
+            <button
+                onclick="logout()"
+                class="logout-button"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <main class="dashboard">
+
+        <div class="dashboard-header">
+
+            <div>
+
+                <p class="small-title">
+                    YOUR WORKSPACE
+                </p>
+
+                <h1>
+                    My Tasks
+                </h1>
+
+            </div>
+
+        </div>
+
+
+        <div class="add-task-card">
+
+            <h2>
+                Add New Task
+            </h2>
+
+
+            <form id="taskForm">
+
+                <input
+                    type="text"
+                    id="taskTitle"
+                    placeholder="Task title"
+                    required
+                >
+
+
+                <input
+                    type="text"
+                    id="taskDescription"
+                    placeholder="Task description"
+                    required
+                >
+
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="taskComplete"
+                    >
+
+                    Completed
+
+                </label>
+
+
+                <button
+                    type="submit"
+                    class="auth-button"
+                >
+                    Add Task
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <div class="task-list-card">
+
+            <h2>
+                Your Tasks
+            </h2>
+
+            <div id="taskContainer">
+                Loading tasks...
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>

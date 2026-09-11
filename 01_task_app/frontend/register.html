@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register - Taskify</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="auth-page">
+
+    <div class="auth-container">
+
+        <div class="auth-logo">✓ Taskify</div>
+
+        <h1>Create Account</h1>
+
+        <p class="auth-subtitle">
+            Start managing your tasks today
+        </p>
+
+        <form id="registerForm">
+
+            <label>Username</label>
+
+            <input
+                type="text"
+                id="registerUsername"
+                placeholder="Choose a username"
+                required
+            >
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                id="registerPassword"
+                placeholder="Choose a password"
+                required
+            >
+
+            <button type="submit" class="auth-button">
+                Create Account
+            </button>
+
+        </form>
+
+        <p class="auth-bottom">
+            Already have an account?
+            <a href="/login">Login</a>
+        </p>
+
+    </div>
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>
