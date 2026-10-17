@@ -43,7 +43,7 @@ def login(user: UserCreate,db: Session = Depends(get_db)):
         
         user_cheak = db.execute(
             select(UserModel).where(
-                UserModel.username== user.username  # Ye UserModel.title db ke data se compare krr rha hai
+                UserModel.username == user.username  # Ye UserModel.username db ke data se compare krr rha hai
             )
         ).scalar_one_or_none()
         
