@@ -4,7 +4,7 @@ from sqlalchemy import select
 from db import get_db, Base, engine
 from models import UserModel
 from schemas import UserCreate
-from security import hash_password, verify_password 
+from security import hash_password, verify_password , create_access_token
 
 
 Base.metadata.create_all(engine)
@@ -59,8 +59,13 @@ def login(user: UserCreate,db: Session = Depends(get_db)):
             raise HTTPException(
                 status_code=401,
                 detail="Please enter the correct username or password.."
-            )           
-        return f"Successfully login as {user.username},{user_cheak.password}"
+            )       
+        access_token = create_access_token(str(user_cheak.username))  
+             
+        return {
+            "access_token": access_token,
+            "token_type": "bearer"
+        }
     
     except Exception:
         db.rollback()
